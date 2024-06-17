@@ -17,21 +17,22 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Início',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
+  name="explore"
+  options={{
+    title: 'Redes Sociais',
+    tabBarIcon: ({ color, focused }) => (
+      <TabBarIcon name={focused ? 'people-circle' : 'people-circle-outline'} color={color} />
+    ),
+  }}
+/>
+
     </Tabs>
   );
 }

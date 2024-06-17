@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform, View } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -8,42 +8,26 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: '#E6E6FA', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require('@/assets/images/mabel.jpeg')}
           style={styles.reactLogo}
         />
-      }>
+      }
+    >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText style={styles.title}>Minhas Redes Sociais</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
+        <Image source={require('@/assets/images/logo.png')} style={styles.reactLinda} />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+      <ThemedView style={styles.aboutContainer}>
+        <ThemedText style={styles.aboutTitle}>Sobre Mim</ThemedText>
+        <ThemedText style={styles.aboutText}>
+          Olá, meu nome é Maria Isabel. 
+          Tenho 16 anos e atualmente estou no segundo ano do ensino médio integrado com técnico em informática para internet.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -51,20 +35,57 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
+  title: {
+    fontFamily: Platform.select({ ios: 'Arial', android: 'Roboto' }),
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    color: '#333',
+  },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    marginTop: 10,
+    marginBottom: 20,
   },
   stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+    alignItems: 'center',
+    marginVertical: 2       ,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+    height: 300,
+    width: '100%',
+    resizeMode: 'cover',
+  },
+  reactLinda: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+  },
+  aboutContainer: {
+    padding: 20,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    marginHorizontal: 20,
+    marginTop: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+  },
+  aboutTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
+    color: '#333',
+  },
+  aboutText: {
+    fontSize: 16,
+    textAlign:'justify',
+    lineHeight: 24,
+    color: '#555',
   },
 });
+

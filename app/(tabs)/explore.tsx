@@ -20,7 +20,7 @@ export default function TabTwoScreen() {
     Linking.openURL('mailto:mariaisabelmbll5@gmail.com');
   };
   const handleLinkedin = () => {
-    Linking.openURL('https://www.linkedin.com/in/mabelsilva');
+    Linking.openURL('https://www.linkedin.com/in/mabellsilva');
   };
   const handleGit = () => {
     Linking.openURL('https://github.com/mabelsilva');
@@ -33,7 +33,7 @@ export default function TabTwoScreen() {
     >
       <Image source={require('@/assets/images/logo.png')} style={styles.logo} />
       <ThemedView style={styles.titleContainer}>
-        <ThemedText style={styles.title}>Minhas Redes Sociais</ThemedText>
+        <ThemedText style={styles.title}> @bmabell | @b.mabellx </ThemedText>
       </ThemedView>
       <ThemedView style={styles.buttonContainer}>
         <Pressable
@@ -113,7 +113,11 @@ const styles = StyleSheet.create({
     height: 200,
     resizeMode: 'contain',
     alignSelf: 'center',
+    borderColor: '#191970',
+    borderWidth: 4,
+    borderRadius: 100,
     marginVertical: 20,
+    marginTop: -10,
   },
   buttonContainer: {
     alignItems: 'center',
@@ -128,12 +132,12 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 40,
     marginBottom: 20,
-    width: '80%',
+    width: '90%',
     backgroundColor: '#FFFFFF',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
-    shadowRadius: 4,
+    shadowRadius: 8,
   },
   botoesPressed: {
     backgroundColor: '#E0E0E0',

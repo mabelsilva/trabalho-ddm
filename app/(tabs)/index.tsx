@@ -27,7 +27,8 @@ export default function HomeScreen() {
         <ThemedText style={styles.aboutTitle}>Sobre Mim</ThemedText>
         <ThemedText style={styles.aboutText}>
           Olá, meu nome é Maria Isabel. 
-          Tenho 16 anos e atualmente estou no segundo ano do ensino médio integrado com técnico em informática para internet.
+          Tenho 16 anos e atualmente estou no segundo ano do ensino médio integrado com técnico em informática para internet
+           na Etec Professor Milton Gazzetti de Presidente Venceslau. 
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -62,6 +63,9 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     resizeMode: 'contain',
+    borderColor: '#191970',
+    borderWidth: 4,
+    borderRadius: 100,
   },
   aboutContainer: {
     padding: 20,
@@ -72,7 +76,7 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.2,
-    shadowRadius: 5,
+    shadowRadius: 4,
   },
   aboutTitle: {
     fontSize: 22,

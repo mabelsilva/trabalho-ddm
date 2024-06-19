@@ -4,7 +4,7 @@
     "slug": "codespaces-blank",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/splashpng",
+    "icon": "./assets/images/splash.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/splash.png",
+        "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
